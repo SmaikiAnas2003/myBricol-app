@@ -1,23 +1,62 @@
-# See http://help.github.com/ignore-files/ for more about ignoring files.
+# ===================================================================
+# Fichier .gitignore combiné pour le projet myBricol (Frontend + Backend)
+# ===================================================================
 
-# Compiled output
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# ---- Frontend (Angular / Node.js) ----
 /dist
 /tmp
 /out-tsc
 /bazel-out
-
-# Node
 /node_modules
 npm-debug.log
 yarn-error.log
+/.angular
+.sass-cache/
+/connect.lock
+/coverage
+/libpeerconnection.log
+testem.log
+/typings
 
-# IDEs and editors
-.idea/
-.project
+# ---- Backend (Java / Maven) ----
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# ---- IDEs et Éditeurs ----
+
+# IntelliJ IDEA
+.idea
+*.iws
+*.iml
+*.ipr
+
+# STS / Eclipse
+.apt_generated
 .classpath
-.c9/
-*.launch
-.settings/
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# Sublime Text
 *.sublime-workspace
 
 # Visual Studio Code
@@ -28,20 +67,7 @@ yarn-error.log
 !.vscode/extensions.json
 .history/*
 
-# Miscellaneous
-/.angular
-.sass-cache/
-/connect.lock
-/coverage
-/libpeerconnection.log
-testem.log
-/typings
-
-# System files
-.DS_Store
-Thumbs.db
-
-# Firebase
+# ---- Firebase ----
 .firebase
 *-debug.log
 .runtimeconfig.json
